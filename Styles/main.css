@@ -1,0 +1,161 @@
+﻿body{
+    background-image: url("../Images/background-pattern.png");
+    image-rendering:pixelated;
+}
+
+/* Page Wrapper */
+
+#pageWrapper {
+    position: relative;
+    width: 80%;
+    min-width: 500px;
+    height: 800px;
+    margin: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1c3033;
+    background-color: #eef3f2;
+}
+
+/* Toolbar */
+
+.toolbarWrapper {
+    display: grid;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+}
+
+.toolbarItem {
+    height: 30px;
+    margin: 2px;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1c3033;
+    background-color: #e0e5e4;
+    font-family: Tahoma, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #1c3033;
+    cursor: pointer;
+}
+
+.toolbarItem:hover:not(#contactInfo) {
+    background-color: #c5c9c8;
+}
+
+.toolbarImage:hover {
+    background-color: #c5c9c8;
+}
+
+/* Toolbar Dynamic Text */
+
+@media screen and (max-width: 1000px) {
+    .fullToolbarText {
+        display: none;
+    }
+    .contentDivThumbnail {
+        display: none;
+    }
+}
+
+/* Home */
+#homeDiv {
+    width: 96%;
+    height: 70%;
+    margin: 2%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0e5e4;
+}
+
+.homeDivTitle {
+    font-family: Trebuchet MS, Tahoma, sans-serif;
+    font-size: 1.5em;
+    line-height: 0em;
+    margin-left: 2%;
+}
+
+.homeParagraph {
+    font-family: Tahoma, sans-serif;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* Contact Info */
+#contactInfo {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin-bottom: 2px;
+    padding-left: 0em;
+}
+
+.contactInfoImg {
+    width: 2em;
+    text-align: center;
+}
+
+/* Content Divs */
+.contentDivWeb {
+    display:none;
+    width: 75%;
+    height: 150px;
+    float: right;
+    margin: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0e5e4;
+}
+
+.contentDivMusic {
+    display:none;
+    width: 75%;
+    height: 150px;
+    float: right;
+    margin: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0e5e4;
+}
+
+.contentDivArt {
+    display:none;
+    width: 75%;
+    height: 150px;
+    float: right;
+    margin: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0e5e4;
+}
+
+.contentDivTitle {
+    font-family: Trebuchet MS, Tahoma, sans-serif;
+    font-size: 1.5em;
+    line-height: 0em;
+    margin-left: 2%;
+}
+
+.contentDivSummary {
+    font-family: Tahoma, sans-serif;
+    font-size: 0.9em;
+    line-height: 1em;
+    margin-left: 2%;
+}
+
+.contentDivLink {
+    margin-right: 5%;
+}
+
+.contentDivThumbnail { /* Must be a 128x128 image! */
+    position: relative;
+    float: right;
+    margin: 6px;
+    margin-left: 24px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #e0e5e4;
+}

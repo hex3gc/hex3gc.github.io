@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jake McMaster</title>
+    <link rel="stylesheet" type="text/css" href="Styles/main.css">
+    <script>
+        function showContentDivs(targetClass) 
+        {
+            document.getElementById('homeDiv').style.display = "none";
+            switch (targetClass)
+                {
+                    case 'contentDivWeb': 
+                        hideContentDivs('contentDivMusic');
+                        hideContentDivs('contentDivArt');
+                        break;
+                    case 'contentDivMusic': 
+                        hideContentDivs('contentDivWeb');
+                        hideContentDivs('contentDivArt');
+                        break;
+                    case 'contentDivArt': 
+                        hideContentDivs('contentDivWeb');
+                        hideContentDivs('contentDivMusic');
+                        break;
+                }
+            Array.from(document.getElementsByClassName(targetClass)).forEach
+            (
+                function(element, index, array) 
+                {
+                    element.style.display = "block";
+                }
+            );
+        }
+        function hideContentDivs(targetClass) 
+        {
+            Array.from(document.getElementsByClassName(targetClass)).forEach
+            (
+                function(element, index, array) 
+                {
+                    element.style.display = "none";
+                }
+            );
+        }
+        function showHome()
+        {
+            document.getElementById('homeDiv').style.display = "block";
+            hideContentDivs('contentDivWeb');
+            hideContentDivs('contentDivMusic');
+            hideContentDivs('contentDivArt');
+        }
+    </script>
+</head>
+<body>
+    <div id="pageWrapper">
+        <!-- Toolbar elements -->
+        <div class="toolbarWrapper">
+            <div class="toolbarItem" onclick="showContentDivs('contentDivWeb')">
+                Software <span class="fullToolbarText">&amp; Web Development</span>
+            </div>
+            <div class="toolbarItem" onclick="showContentDivs('contentDivMusic')">
+                Music <span class="fullToolbarText">&amp; Sound Design</span>
+            </div>
+            <div class="toolbarItem" onclick="showContentDivs('contentDivArt')">
+                Art <span class="fullToolbarText">&amp; Graphic Design</span>
+            </div>
+        </div>
+
+        <!-- Homepage summary -->
+        <div id="homeDiv">
+            <p class="homeDivTitle">Jake McMaster</p>
+            <p class="homeParagraph"><b>Under Construction!</b></p>
+            <p class="homeParagraph">Welcome to my portfolio page. This is where I'll be showcasing my creative works and examples of my skills in software development and the arts. All of the items on this webpage- including the page itself- are personal projects created in my own spare time.</p>
+            <p class="homeParagraph">At the top of the page are three navigation options:</p>
+            <ul>
+                <li class="homeParagraph"><b>Software & Web Development</b> contains some of my coding projects, mainly developed alongside the Unity game engine.</li>
+                <li class="homeParagraph"><b>Music & Sound Design</b> has a few snippets of music that I've produced.</li>
+                <li class="homeParagraph"><b>Art & Graphic Design</b> provides links to some of my visual art: Character designs, graphics, etc.</li>
+            </ul>
+            <p class="homeParagraph">At the bottom of the page there are links to my email address, my online accounts for more content, and a button to return to this homepage.</p>
+        </div>
+
+        <!-- Content div elements -->
+        <div class="contentDivWeb">
+            <img src="Images/hex3Mod.png" class="contentDivThumbnail"/>
+            <p class="contentDivTitle">Hex3Mod</p>
+            <p class="contentDivSummary">A mod for <em>Risk Of Rain 2</em> that adds 25 new items, each with custom models and mechanics. Utilizes APIs created by the modding community such as <em>BepInEx, R2API, MonoMod</em> and <em>RiskOfOptions</em>.</p>
+            <p class="contentDivSummary">
+                <a href="https://thunderstore.io/package/hex3/Hex3Mod/">
+                <span class="contentDivLink">Download page</span></a>
+                <a href="https://github.com/hex3gc/Hex3Mod">
+                <span class="contentDivLink">Source code</span></a>
+            </p>
+        </div>
+        <div class="contentDivWeb">
+            <img src="Images/hex3Reworks.png" class="contentDivThumbnail"/>
+            <p class="contentDivTitle">Hex3Rebalance</p>
+            <p class="contentDivSummary">A work-in-progress mod for <em>Risk Of Rain 2</em> that adds new interactables and game mechanics to modifiy its balance. Utilizes APIs created by the modding community such as <em>BepInEx, R2API,</em> and <em>MonoMod</em>, making heavy use of Intermediate Language (IL) manipulation.</p>
+            <p class="contentDivSummary">
+                <a href="https://github.com/hex3gc/Hex3Rebalance">
+                <span class="contentDivLink">Source code</span></a>
+            </p>
+        </div>
+        <div class="contentDivWeb">
+            <img src="Images/unity.png" class="contentDivThumbnail"/>
+            <p class="contentDivTitle">CardShop</p>
+            <p class="contentDivSummary">A heavily work-in-progress game prototype made in <em>Unity</em>. Play cards to defeat your enemies, making your way through different environments.</p>
+            <p class="contentDivSummary">
+                <a href="https://gitfront.io/r/hex3gc/iXrLYeDrpQKb/CardShop/">
+                <span class="contentDivLink">Source code</span></a>
+            </p>
+        </div>
+
+        <div class="contentDivMusic" style="color: #c5c9c8;">
+            <img src="Images/placeholder.png" class="contentDivThumbnail"/>
+            <p class="contentDivTitle">Work In Progress</p>
+            <p class="contentDivSummary">There isn't much here... Check back later for more entries.</p>
+        </div>
+
+        <div class="contentDivArt">
+            <img src="Images/placeholder.png" class="contentDivThumbnail"/>
+            <p class="contentDivTitle">Hex3Mod Assets</p>
+            <p class="contentDivSummary">A set of 25 3D model assets created for Hex3Mod. Designed using <em>Blender, Adobe Photoshop</em> and <em>Paint.Net</em>.</p>
+            <p class="contentDivSummary">
+                <a href="">
+                <span class="contentDivLink">Link</span></a>
+            </p>
+        </div>
+
+        <div class="contentDivArt" style="color: #c5c9c8;">
+            <img src="Images/placeholder.png" class="contentDivThumbnail"/>
+            <p class="contentDivTitle">Work In Progress</p>
+            <p class="contentDivSummary">There isn't much here... Check back later for more entries.</p>
+        </div>
+
+        <!-- Lower toolbar elements -->
+        <div class="toolbarItem" id="contactInfo">
+            <table>
+                <tr>
+                    <td class="contactInfoImg">
+                        <a href="mailto:jakemcm123@gmail.com">
+                            <img src="Images/icon-Email.png" class="toolbarImage" title="Email me" />
+                        </a>
+                    </td>
+                    <!--
+                    <td class="contactInfoImg">
+                        <img src="Images/icon-LinkedIn.png" title="LinkedIn"/>
+                    </td>
+                    -->
+                    <td class="contactInfoImg">
+                        <a href="https://github.com/hex3gc/">
+                            <img src="Images/icon-Github.png" class="toolbarImage" title="GitHub"/>
+                        </a>
+                    </td>
+                    <td class="contactInfoImg">
+                        <img src="Images/icon-Artstation.png" class="toolbarImage" title="Artstation"/>
+                    </td>
+                    <td class="contactInfoImg">
+                        <img src="Images/icon-Audius.png" class="toolbarImage" title="Audius"/>
+                    </td>
+                    <td class="contactInfoImg">
+                        <img src="Images/icon-Home.png" class="toolbarImage" onclick="showHome()" title="Home"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
