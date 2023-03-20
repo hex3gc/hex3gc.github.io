@@ -12,15 +12,22 @@
                 {
                     case 'contentDivWeb': 
                         hideContentDivs('contentDivMusic');
+                        hideContentDivs('contentDivMusicSummary');
                         hideContentDivs('contentDivArt');
+                        hideContentDivs('contentDivArtSummary');
                         break;
                     case 'contentDivMusic': 
                         hideContentDivs('contentDivWeb');
+                        hideContentDivs('contentDivWebSummary');
                         hideContentDivs('contentDivArt');
+                        hideContentDivs('contentDivArtSummary');
+
                         break;
                     case 'contentDivArt': 
                         hideContentDivs('contentDivWeb');
+                        hideContentDivs('contentDivWebSummary');
                         hideContentDivs('contentDivMusic');
+                        hideContentDivs('contentDivMusicSummary');
                         break;
                 }
             Array.from(document.getElementsByClassName(targetClass)).forEach
@@ -45,8 +52,11 @@
         {
             document.getElementById('homeDiv').style.display = "block";
             hideContentDivs('contentDivWeb');
+            hideContentDivs('contentDivWebSummary');
             hideContentDivs('contentDivMusic');
+            hideContentDivs('contentDivMusicSummary');
             hideContentDivs('contentDivArt');
+            hideContentDivs('contentDivArtSummary');
         }
     </script>
 </head>
@@ -54,13 +64,13 @@
     <div id="pageWrapper">
         <!-- Toolbar elements -->
         <div class="toolbarWrapper">
-            <div class="toolbarItem" onclick="showContentDivs('contentDivWeb')">
+            <div class="toolbarItem" onclick="showContentDivs('contentDivWeb');showContentDivs('contentDivWebSummary');">
                 Software <span class="fullToolbarText">&amp; Web Development</span>
             </div>
-            <div class="toolbarItem" onclick="showContentDivs('contentDivMusic')">
+            <div class="toolbarItem" onclick="showContentDivs('contentDivMusic');showContentDivs('contentDivMusicSummary');">
                 Music <span class="fullToolbarText">&amp; Sound Design</span>
             </div>
-            <div class="toolbarItem" onclick="showContentDivs('contentDivArt')">
+            <div class="toolbarItem" onclick="showContentDivs('contentDivArt');showContentDivs('contentDivArtSummary');">
                 Art <span class="fullToolbarText">&amp; Graphic Design</span>
             </div>
         </div>
@@ -109,27 +119,91 @@
                 <span class="contentDivLink">Source code</span></a>
             </p>
         </div>
+        <div class="contentDivWebSummary">
+            <p><b>Applicable skills and experience:</b></p>
+            <p>Coding languages</p>
+            <ul>
+                <li>C#</li>
+                <li>HTML/CSS</li>
+                <li>Javascript</li>
+                <li>Java</li>
+            </ul>
+            <p>Tools</p>
+            <ul>
+                <li>Visual Studio</li>
+                <li>Unity</li>
+                <li>GitHub</li>
+            </ul>
+            <p>Education</p>
+            <ul>
+                <li>A-Level Computer Science</li>
+            </ul>
+        </div>
 
         <div class="contentDivMusic" style="color: #c5c9c8;">
             <img src="Images/placeholder.png" class="contentDivThumbnail"/>
             <p class="contentDivTitle">Work In Progress</p>
             <p class="contentDivSummary">There isn't much here... Check back later for more entries.</p>
         </div>
+        <div class="contentDivMusicSummary">
+            <p><b>Applicable skills and experience:</b></p>
+            <p>Tools</p>
+            <ul>
+                <li>FL Studio</li>
+                <li>Logic Pro X</li>
+            </ul>
+            <p>Skills</p>
+            <ul>
+                <li>Sound Design & Synthesis</li>
+                <li>Composition</li>
+                <li>Mixing</li>
+                <li>Mastering</li>
+            </ul>
+            <p>Education</p>
+            <ul>
+                <li>BA (Hons) Music Technology Degree</li>
+                <li>BTEC Music Technology</li>
+            </ul>
+        </div>
 
         <div class="contentDivArt">
             <img src="Images/placeholder.png" class="contentDivThumbnail"/>
             <p class="contentDivTitle">Hex3Mod Assets</p>
             <p class="contentDivSummary">A set of 25 3D model assets created for Hex3Mod. Designed using <em>Blender, Adobe Photoshop</em> and <em>Paint.Net</em>.</p>
+            <!--
             <p class="contentDivSummary">
                 <a href="">
                 <span class="contentDivLink">Link</span></a>
             </p>
+            -->
         </div>
-
         <div class="contentDivArt" style="color: #c5c9c8;">
             <img src="Images/placeholder.png" class="contentDivThumbnail"/>
             <p class="contentDivTitle">Work In Progress</p>
             <p class="contentDivSummary">There isn't much here... Check back later for more entries.</p>
+        </div>
+        <div class="contentDivArtSummary">
+            <p><b>Applicable skills and experience:</b></p>
+            <p>Tools</p>
+            <ul>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Krita</li>
+                <li>Blender</li>
+                <li>Paint.Net</li>
+                <li>FXHome HitFilm</li>
+            </ul>
+            <p>Skills</p>
+            <ul>
+                <li>Digital Art</li>
+                <li>Graphic Design</li>
+                <li>3D Modelling</li>
+                <li>Video Editing</li>
+            </ul>
+            <p>Education</p>
+            <ul>
+                <li>A-Level Graphic Communication</li>
+            </ul>
         </div>
 
         <!-- Lower toolbar elements -->

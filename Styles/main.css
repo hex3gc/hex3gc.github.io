@@ -109,6 +109,17 @@
     border-width: 2px;
     border-color: #e0e5e4;
 }
+.contentDivWebSummary {
+    display:none;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    float: up;
+    margin: 12px;
+    font-family: Tahoma, sans-serif;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
 
 .contentDivMusic {
     display:none;
@@ -120,6 +131,17 @@
     border-width: 2px;
     border-color: #e0e5e4;
 }
+.contentDivMusicSummary {
+    display:none;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    float: up;
+    margin: 12px;
+    font-family: Tahoma, sans-serif;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
 
 .contentDivArt {
     display:none;
@@ -130,6 +152,17 @@
     border-style: solid;
     border-width: 2px;
     border-color: #e0e5e4;
+}
+.contentDivArtSummary {
+    display:none;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    float: up;
+    margin: 12px;
+    font-family: Tahoma, sans-serif;
+    font-size: 0.8em;
+    line-height: 1.2em;
 }
 
 .contentDivTitle {
