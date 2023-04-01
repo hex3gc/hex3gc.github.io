@@ -14,7 +14,7 @@
     border-style: solid;
     border-width: 2px;
     border-color: #1c3033;
-    background-color: #eef3f2;
+    background-color: #ffffff;
 }
 
 /* Toolbar */
@@ -45,7 +45,7 @@
 }
 
 .toolbarImage:hover {
-    background-color: #c5c9c8;
+    background-color: #b1b6b5;
 }
 
 /* Toolbar Dynamic Text */
